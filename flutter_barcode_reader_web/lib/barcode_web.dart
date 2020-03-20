@@ -28,7 +28,11 @@ class BarcodeScanPlugin {
     var script = document.createElement('script');
     script.setAttribute('type', 'text/javascript');
     document.querySelector('head').append(script);
-    script.setAttribute('src', 'assets/packages/barcode_scan_web/assets/jsqrscanner.nocache.js');
+    script.setAttribute('src', 'https://cdn.jsdelivr.net/gh/jbialobr/JsQRScanner@master/war/js/jsqrscanner.nocache.js');
+    // var script = document.createElement('script');
+    // script.setAttribute('type', 'text/javascript');
+    // document.querySelector('head').append(script);
+    // script.setAttribute('src', 'assets/packages/barcode_scan_web/assets/jsqrscanner.nocache.js');
     _createHTML();
     document.querySelector('#toolbar p').addEventListener('click', (event) => _close());
     setProperty(window, 'JsQRScannerReady', allowInterop(this.scannerReady));
